@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Task Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Task Logo" class="logo" />
+        <div>
+            <h1>Task Management</h1>
+            <p class="subtitle">Organize your day efficiently and easily!</p>
+        </div>
+    </header>
+    <div class="container">
+        <section class="instructions">
+            <h2>How to use:</h2>
+            <ul>
+                <li>Type your task, select a priority, and click <b>Add Task</b>.</li>
+                <li>Mark a task as <b>Important</b> and set a password to protect it.</li>
+                <li>Click a task to mark it as completed.</li>
+                <li>Click <b>Delete</b> to remove a task (password required for important tasks).</li>
+                <li>Use <b>Delete All</b> to clear all tasks.</li>
+                <li>Filter tasks by priority using the filter buttons.</li>
+            </ul>
+        </section>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Enter a new task" required />
+            <select id="priority-select">
+                <option value="high">High</option>
+                <option value="medium" selected>Medium</option>
+                <option value="low">Low</option>
+            </select>
+            <label class="important-label">
+                <input type="checkbox" id="important-checkbox" /> Important
+            </label>
+            <input type="password" id="task-password" placeholder="Password (if important)" style="display:none;" />
+            <button type="submit">Add Task</button>
+        </form>
+        <div class="task-actions">
+            <button id="delete-all-btn" type="button">Delete All</button>
+            <div class="filter-group">
+                <button type="button" class="filter-btn" data-filter="all">All</button>
+                <button type="button" class="filter-btn" data-filter="high">High</button>
+                <button type="button" class="filter-btn" data-filter="medium">Medium</button>
+                <button type="button" class="filter-btn" data-filter="low">Low</button>
+            </div>
+        </div>
+        <div id="task-counter"></div>
+        <ul id="task-list"></ul>
+    </div>
+    <footer class="footer">
+        &copy; 2024 Anusha N. <span style="color:#dc3545; font-size:1.1em; vertical-align:middle;">&#10084;&#65039;</span> All rights reserved.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 

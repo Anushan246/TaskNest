@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Information</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+        }
+        .info-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: linear-gradient(135deg, #fff 60%, #e0eafc 100%);
+            border-radius: 18px;
+            box-shadow: 16px 16px 32px 0 rgba(0,123,255,0.10), -8px -8px 24px 0 rgba(220,53,69,0.08);
+            padding: 36px 32px 32px 32px;
+            border: 2.5px solid #e0eafc;
+            transition: box-shadow 0.4s, border-color 0.4s, transform 0.4s, background 0.4s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .info-container:hover {
+            box-shadow: 32px 32px 48px 0 rgba(0,123,255,0.18), -12px -12px 32px 0 rgba(220,53,69,0.13);
+            border-color: #007bff;
+            background: linear-gradient(120deg, #e0eafc 0%, #fff 100%);
+            transform: rotate(-2deg) scale(1.025);
+        }
+        .info-header { text-align: center; margin-bottom: 24px; }
+        .info-header h1 { color: #007bff; margin-bottom: 8px; font-size: 2.1em; }
+        .info-header p { color: #555; font-size: 1.1em; }
+        .info-section { margin-bottom: 28px; }
+        .info-section h2 { color: #007bff; font-size: 1.15em; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .info-section ul { margin: 0 0 0 22px; font-size: 1.04em; }
+        .nav-link { display: inline-block; margin-top: 18px; color: #fff; background: #007bff; padding: 10px 22px; border-radius: 6px; text-decoration: none; font-weight: 500; transition: background 0.2s; box-shadow: 2px 2px 8px rgba(0,123,255,0.10); }
+        .nav-link:hover { background: #0056b3; }
+        .symbol { font-size: 1.2em; vertical-align: middle; }
+        .corner-symbol {
+            position: absolute;
+            top: 18px;
+            right: 24px;
+            font-size: 2.2em;
+            color: #dc3545;
+            opacity: 0.13;
+            pointer-events: none;
+            user-select: none;
+            transform: rotate(18deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="info-container">
+        <span class="corner-symbol">&#128221;</span>
+        <div class="info-header">
+            <h1>Welcome to the Task Manager! <span class="symbol">&#128640;</span></h1>
+            <p>Get organized and boost your productivity.<br><span style="color:#007bff;font-size:0.98em;"></span></p>
+        </div>
+        <div class="info-section">
+            <h2><span class="symbol">&#10133;</span> How to Add a Task</h2>
+            <ul>
+                <li>Go to the <b>Add Task</b> tab.</li>
+                <li>Enter your task, select its priority, and (optionally) mark it as important with a password.</li>
+                <li>Click <b>Add Task</b> <span class="symbol">&#128073;</span> to save it.</li>
+            </ul>
+        </div>
+        <div class="info-section">
+            <h2><span class="symbol">&#128465;&#65039;</span> How to Remove or Delete a Task</h2>
+            <ul>
+                <li>Click <b>Delete</b> <span class="symbol">&#10060;</span> next to a task to move it to the <b>Deleted Tasks</b> (Recycle Bin).</li>
+                <li>Important tasks require a password to delete <span class="symbol">&#128274;</span>.</li>
+            </ul>
+        </div>
+        <div class="info-section">
+            <h2><span class="symbol">&#9851;</span> How to Restore a Task</h2>
+            <ul>
+                <li>Go to the <b>Deleted Tasks</b> tab <span class="symbol">&#128465;&#65039;</span>.</li>
+                <li>Click <b>Restore</b> <span class="symbol">&#8635;</span> next to a deleted task to bring it back to your active list.</li>
+            </ul>
+        </div>
+        <div class="info-section">
+            <h2><span class="symbol">&#9881;&#65039;</span> Other Features</h2>
+            <ul>
+                <li>Filter tasks by priority (High, Medium, Low) <span class="symbol">&#128200;</span>.</li>
+                <li>Mark tasks as completed by clicking on them <span class="symbol">&#9989;</span>.</li>
+                <li>See a summary of total, completed, and remaining tasks <span class="symbol">&#128202;</span>.</li>
+                <li>Important tasks are protected and require a password to view or delete <span class="symbol">&#128274;</span>.</li>
+            </ul>
+        </div>
+        <a class="nav-link" href="tasks.html">Go to Task Manager</a>
+    </div>
+</body>
+</html> 

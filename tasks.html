@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tabs-header { display: flex; justify-content: center; gap: 18px; background: #007bff; padding: 18px 0 10px 0; border-radius: 0 0 12px 12px; }
+        .tab-link { color: #fff; font-weight: 500; font-size: 1.1em; text-decoration: none; padding: 8px 18px; border-radius: 6px 6px 0 0; background: transparent; transition: background 0.2s, color 0.2s; }
+        .tab-link.active, .tab-link:hover { background: #fff; color: #007bff; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .recycle-bin-list { list-style: none; padding: 0; }
+        .recycle-bin-list li { background: #f9f9f9; margin-bottom: 8px; padding: 12px 10px; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+        .restore-btn { background: #28a745; color: #fff; border: none; border-radius: 4px; padding: 4px 10px; cursor: pointer; font-size: 0.95em; margin-left: 10px; transition: background 0.2s, transform 0.2s; }
+        .restore-btn:hover { background: #1e7e34; transform: scale(1.08); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Task Logo" class="logo" />
+        <div>
+            <h1>Task Management</h1>
+            <p class="subtitle">Organize your day efficiently and easily!</p>
+        </div>
+    </header>
+    <nav class="tabs-header">
+        <a href="#add" class="tab-link active" id="tab-add">Add Task</a>
+        <a href="#remove" class="tab-link" id="tab-remove">Remove Task</a>
+        <a href="#deleted" class="tab-link" id="tab-deleted">Deleted Tasks</a>
+        <a href="info.html" class="tab-link" style="background: #fff; color: #007bff;">Info</a>
+    </nav>
+    <div class="container">
+        <div id="add" class="tab-content active">
+            <!-- Add Task UI will be injected here by script.js -->
+        </div>
+        <div id="remove" class="tab-content">
+            <!-- Remove Task UI will be injected here by script.js -->
+        </div>
+        <div id="deleted" class="tab-content">
+            <h2>Deleted Tasks (Recycle Bin)</h2>
+            <ul id="recycle-bin-list" class="recycle-bin-list"></ul>
+        </div>
+    </div>
+    <footer class="footer">
+        &copy; 2024 Anusha N. <span style="color:#dc3545; font-size:1.1em; vertical-align:middle;">&#10084;&#65039;</span> All rights reserved.
+    </footer>
+    <script src="tasks.js"></script>
+</body>
+</html> 
